@@ -70,17 +70,17 @@ nav ul{
   border-left: none
 }
 
-.about{
+.section{
 padding:60px 80px;
 text-align:center;
 }
-.ourmission{
+.flex{
 display:flex;
 align-items:center;
 gap:50px;
 }
 
-.ourmission img{
+.flex img{
 width:100%;
 max-width:450px;
 border-radius:10px;
@@ -90,13 +90,12 @@ border-radius:10px;
 flex:1;
 }
 
-/* Core Values */
-.Values{
+
+.core{
 background:#f5f5f5;
-text-align: center;
 }
 
-.Values-box{
+.core-container{
 display:flex;
 justify-content:center;
 gap:30px;
@@ -104,7 +103,7 @@ flex-wrap:wrap;
 margin-top:40px;
 }
 
-.boxes{
+.core-box{
 background:white;
 padding:30px;
 width:250px;
@@ -112,13 +111,9 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 border-radius:10px;
 height:200px;
 }
-.section h1 {
-  text-align: center;
-  margin-top: 30px;
-}
 
-
-.my-team{
+/* Team */
+.team-container{
 display:flex;
 justify-content:center;
 gap:30px;
@@ -126,7 +121,7 @@ flex-wrap:wrap;
 margin-top:40px;
 }
 
-.team-pics{
+.team-card{
 background:white;
 padding:20px;
 width:220px;
@@ -135,13 +130,15 @@ border-radius:10px;
 text-align:center;
 }
 
-.team-pics img{
+.team-card img{
 width:100%;
 height:150px;
 object-fit:cover;
 border-radius:10px;
 margin-bottom:10px;
 }
+
+
 .footer{
 background:#1f1f1f;
 color:white;
@@ -199,6 +196,8 @@ gap:10px;
 </head>
 
 <body>
+
+<!-- Navbar -->
 <nav class="nav">
     <h2>LOGO</h2>
     <ul>
@@ -212,16 +211,20 @@ gap:10px;
     <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
 
      </nav>
+  
 
-<section class="about">
+<!-- About Our Store -->
+<section class="section">
 <h1>About Our Store</h1>
 <p>
 We provide high quality furniture with modern design and comfort.<br>
 Our goal is to make your home beautiful and stylish.
 </p>
 </section>
-<section class="about">
-<div class="ourmission">
+
+<!-- Image + Mission -->
+<section class="section">
+<div class="flex">
 
 <img src="pics/about.jpg" alt="">
 
@@ -235,22 +238,24 @@ that improves the comfort and beauty of every home.
 
 </div>
 </section>
-<section class="Values">
+
+<!-- Core Values -->
+<section class="section core">
 <h1>Our Core Values</h1>
 
-<div class="Values-box">
+<div class="core-container">
 
-<div class="boxes">
+<div class="core-box">
 <h3>Design</h3>
 <p>Modern and clean furniture design.</p>
 </div>
 
-<div class="boxes">
+<div class="core-box">
 <h3>Quality</h3>
 <p>High quality materials and finish.</p>
 </div>
 
-<div class="boxes">
+<div class="core-box">
 <h3>Comfort</h3>
 <p>Built for everyday comfort.</p>
 </div>
@@ -258,30 +263,31 @@ that improves the comfort and beauty of every home.
 </div>
 </section>
 
+<!-- Team -->
 <section class="section">
 <h1>Our Team</h1>
 
-<div class="my-team">
+<div class="team-container">
 
-<div class="team-pics">
+<div class="team-card">
 <img src="pics/team1.jpg" alt="">
 <h3>John</h3>
 <p>CEO</p>
 </div>
 
-<div class="team-pics">
+<div class="team-card">
 <img src="pics/team2.jpg" alt="">
 <h3>Ali</h3>
 <p>Manager</p>
 </div>
 
-<div class="team-pics">
+<div class="team-card">
 <img src="pics/team3.jpg" alt="">
 <h3>David</h3>
 <p>Designer</p>
 </div>
 
-<div class="team-pics">
+<div class="team-card">
 <img src="pics/team4.jpg" alt="">
 <h3>Ahmed</h3>
 <p>Developer</p>
@@ -289,6 +295,8 @@ that improves the comfort and beauty of every home.
 
 </div>
 </section>
+
+<!-- Footer -->
 <footer class="footer">
 
 <div class="footer-container">
