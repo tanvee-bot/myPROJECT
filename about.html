@@ -3,203 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Furnish - About</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-line-height:1.6;
-}
-.nav{
-  background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-     }
-nav ul{
-  list-style: none;
-  margin-left: 50px;
-}
-
-.nav ul li{
-  display: inline;
-  color: gainsboro;
-  font-size:  15px;
-  font-family: 'poppins' , sans-serif;
-  text-transform: uppercase;
-  padding-left: 20px;
-
-}
-
-.nav a{
-  text-decoration: none;
-  color: #575555;;
-  gap: 25px;
-  transition: color 0.3s ease;
-}
-.nav ul li a:hover {
-  color: black;
-}
-.search{
-  display: flex; 
-  gap: 5px;
-}
-.search input{
-  border: 1px solid gray;
-  border-radius:6px;
-  padding: 8px 8px 8px 15px;
-  gap: 10px;
-  box-sizing: border-box;
-  width: 60%;
-}
-.search button {
-  padding: 8px 15px;
-  border: none;
-  background-color: orange ;
-  color: white;
-  cursor: pointer;
-  border-left: none
-}
-
-.section{
-padding:60px 80px;
-text-align:center;
-}
-.flex{
-display:flex;
-align-items:center;
-gap:50px;
-}
-
-.flex img{
-width:100%;
-max-width:450px;
-border-radius:10px;
-}
-
-.text{
-flex:1;
-}
+<title>Handi CRAFT-About</title>
+<link rel="stylesheet" href="about.css">
 
 
-.core{
-background:#f5f5f5;
-}
-
-.core-container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.core-box{
-background:white;
-padding:30px;
-width:250px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-border-radius:10px;
-height:200px;
-}
-
-/* Team */
-.team-container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.team-card{
-background:white;
-padding:20px;
-width:220px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-border-radius:10px;
-text-align:center;
-}
-
-.team-card img{
-width:100%;
-height:150px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:10px;
-}
-
-
-.footer{
-background:#1f1f1f;
-color:white;
-padding:60px 80px 20px;
-}
-
-.footer-container{
-display:flex;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-margin-bottom:30px;
-}
-
-.footer-box{
-width:250px;
-}
-
-.footer-box h2,
-.footer-box h3{
-margin-bottom:15px;
-}
-
-.footer-box ul{
-list-style:none;
-}
-
-.footer-box li{
-margin:6px 0;
-}
-
-.footer-bottom{
-text-align:center;
-border-top:1px solid #444;
-padding-top:15px;
-font-size:14px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-.flex{
-flex-direction:column;
-text-align:center;
-}
-
-.nav{
-flex-direction:column;
-gap:10px;
-}
-
-}
-
-</style>
 </head>
-
 <body>
-
-<!-- Navbar -->
 <nav class="nav">
-    <h2>LOGO</h2>
+    <h2>UniCraft</h2>
     <ul>
     <li><a href="#">Home</a></li>
     <li><a href="about.html">About Us</a></li>
@@ -209,86 +20,75 @@ gap:10px;
     <li>
     </ul>
     <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
-
-     </nav>
-  
-
-<!-- About Our Store -->
-<section class="section">
+</nav>
+<section class="about">
 <h1>About Our Store</h1>
 <p>
-We provide high quality furniture with modern design and comfort.<br>
-Our goal is to make your home beautiful and stylish.
+Our mission is to deliver authentic, handcrafted products to every customer
 </p>
 </section>
 
-<!-- Image + Mission -->
-<section class="section">
-<div class="flex">
-
-<img src="pics/about.jpg" alt="">
-
-<div class="text">
+<section class="about">
+<div class="mission">
+<img src="pics/yasin-onus-nA-rlWLiv4w-unsplash.jpg" alt="">
+<div class="our_mission">
 <h1>Our Mission</h1>
 <p>
-Our mission is to deliver affordable, durable and modern furniture
-that improves the comfort and beauty of every home.
+Our mission is to deliver authentic, handcrafted products to every customer, crafted with creativity, quality, and traditional craftsmanship
 </p>
 </div>
-
 </div>
 </section>
 
-<!-- Core Values -->
-<section class="section core">
+<section class="Values">
 <h1>Our Core Values</h1>
 
-<div class="core-container">
+<div class="values_main_div">
 
-<div class="core-box">
+<div class="Inner_values">
 <h3>Design</h3>
-<p>Modern and clean furniture design.</p>
+<p>Modern and clean Handicraft design.</p>
 </div>
 
-<div class="core-box">
+<div class="Inner_values">
 <h3>Quality</h3>
 <p>High quality materials and finish.</p>
 </div>
 
-<div class="core-box">
+<div class="Inner_values">
 <h3>Comfort</h3>
-<p>Built for everyday comfort.</p>
+<p>Built spacially for your home.</p>
 </div>
 
 </div>
 </section>
 
-<!-- Team -->
+
 <section class="section">
-<h1>Our Team</h1>
+<h1 class="team">Our Team</h1>
 
-<div class="team-container">
+<div class="team-section">
 
-<div class="team-card">
-<img src="pics/team1.jpg" alt="">
+<div class="team-section1">
+<img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg" alt="">
 <h3>John</h3>
 <p>CEO</p>
 </div>
 
-<div class="team-card">
-<img src="pics/team2.jpg" alt="">
+<div class="team-section1">
+<img src="pics/vecteezy_handcrafted-wicker-baskets-and-containers-for-eco-friendly_72187857.jpg" alt="">
 <h3>Ali</h3>
 <p>Manager</p>
 </div>
 
-<div class="team-card">
-<img src="pics/team3.jpg" alt="">
+<div class="team-section1">
+<img src="pics/pexels-puneet-singh-rawat-3530003-5874825.jpg" alt="">
 <h3>David</h3>
 <p>Designer</p>
 </div>
 
-<div class="team-card">
-<img src="pics/team4.jpg" alt="">
+<div class="team-section1">
+<img src="pics/tuan-nguyen-_fxvuMucGDs-unsplash.jpg" alt="">
 <h3>Ahmed</h3>
 <p>Developer</p>
 </div>
@@ -296,15 +96,14 @@ that improves the comfort and beauty of every home.
 </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
 
-<div class="footer-container">
+<div class="footer-section">
 
 <div class="footer-box">
 <h2>Furnish</h2>
 <p>
-Modern furniture brand focused on quality, comfort and design.
+Modern Handicraft brand focused on quality, comfort and design.
 </p>
 </div>
 
@@ -320,7 +119,7 @@ Modern furniture brand focused on quality, comfort and design.
 
 <div class="footer-box">
 <h3>Contact</h3>
-<p>Email: info@furnish.com</p>
+<p>Email: UniCraft@gmail.com</p>
 <p>Phone: +123 456 789</p>
 <p>Address: Your City</p>
 </div>
@@ -328,7 +127,7 @@ Modern furniture brand focused on quality, comfort and design.
 </div>
 
 <div class="footer-bottom">
-© 2026 Furnish. All Rights Reserved.
+© 2026 UniCraft. All Rights Reserved.
 </div>
 
 </footer>
