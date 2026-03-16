@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Furnish</title>
+<title>Unicraft</title>
 
 <style>
-
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
 
         body {
             background: #f5f5f5;
@@ -78,9 +77,7 @@ nav ul{
             background: #ff6600;
         }
 
-/* HERO */
-
-.hero{
+.main_page{
 height:90vh;
 background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover no-repeat;
 display:flex;
@@ -90,12 +87,12 @@ text-align:center;
 color:#fff;
 }
 
-.hero h1{
+.main_page h1{
 font-size:50px;
 margin-bottom:20px;
 }
 
-.hero button{
+.main_page button{
             padding: 10px 20px;
             border: none;
             background: #111;
@@ -105,7 +102,7 @@ margin-bottom:20px;
             transition: 0.3s;
         }
 
-        .hero button:hover {
+        .main_page button:hover {
             background: #ff6600;
         }
 
@@ -122,28 +119,30 @@ margin-bottom:40px;
 font-size:32px;
 }
 
-.product-grid{
+.my_product{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+border-radius: 4px;
 }
 
-.card{
+.picss{
 border:1px solid #eee;
 padding:20px;
- transition: 0.3s;
+transition: 0.3s;
+
 }
 
-.card img{
+.picss img{
 width:100%;
 height:200px;
 object-fit:cover;
 }
 
-.card h3{
+.picss h3{
 margin-top:10px;
 }
-.card:hover {
+.picss:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
@@ -172,7 +171,7 @@ color:white;
 padding:60px 80px 20px;
 }
 
-.footer-container{
+.main_box{
 display:flex;
 justify-content:space-between;
 gap:40px;
@@ -180,20 +179,23 @@ flex-wrap:wrap;
 margin-bottom:30px;
 }
 
-.footer-box{
+.inner_boxes{
 width:250px;
 }
 
-.footer-box h2,
-.footer-box h3{
+.inner_boxes h2{
+  margin-bottom:15px;
+}
+
+.inner_boxes h3{
 margin-bottom:15px;
 }
 
-.footer-box ul{
+.inner_bixes ul{
 list-style:none;
 }
 
-.footer-box li{
+.inner_boxes li{
 margin:6px 0;
 }
 
@@ -221,9 +223,9 @@ font-size:14px;
     <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
 </nav>
 
-<section class="hero">
+<section class="main_page">
 <div>
-<h1>Modern Furniture For Your Home</h1>
+<h1>Modern Hnadicraft For Your Home</h1>
 <button>Shop Now</button>
 </div>
 </section>
@@ -231,28 +233,28 @@ font-size:14px;
 <section class="products">
 <h2>Featured Products</h2>
 
-<div class="product-grid">
+<div class="my_product">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1582582429416-8a3a9f3b3e16">
+<div class="picss">
+<img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg">
 <h3>Wood Chair</h3>
 <p>$120</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+<div class="picss">
+<img src="pics/pexels-puneet-singh-rawat-3530003-5874825.jpg">
 <h3>Modern Sofa</h3>
 <p>$350</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503602642458-232111445657">
+<div class="picss">
+<img src="pics/aluminium-handicrafts-2.jpg">
 <h3>Table Lamp</h3>
 <p>$90</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9">
+<div class="picss">
+<img src="pics/tuan-nguyen-_fxvuMucGDs-unsplash.jpg">
 <h3>Wood Table</h3>
 <p>$210</p>
 </div>
@@ -263,34 +265,34 @@ font-size:14px;
 <section class="services">
 
 <div class="service">
-<h3>Free Delivery</h3>
-<p>Fast delivery for all orders.</p>
+<h3>Wood Handicraft</h3>
+<p>We deliver best wood handicraft Items.</p>
 </div>
 
 <div class="service">
-<h3>Support</h3>
-<p>24/7 customer support service.</p>
+<h3>Home Decore items </h3>
+<p>Best home decore items for your home.</p>
 </div>
 
 <div class="service">
-<h3>Secure Payment</h3>
-<p>Safe and secure payment system.</p>
+<h3>Allumunium handicraft ittems</h3>
+<p>best hand made allumunium items .</p>
 </div>
 
 </section>
 
  <footer class="footer">
 
-<div class="footer-container">
+<div class="main_box">
 
-<div class="footer-box">
+<div class="inner-boxes">
 <h2>UniCraft</h2>
 <p>
-Modern handicraft brand focused on quality, comfort and design.
+Modern handicraft brand focused on quality,design.
 </p>
 </div>
 
-<div class="footer-box">
+<div class="inner-boxes">
 <h3>Quick Links</h3>
 <ul>
 <li>Home</li>
@@ -300,7 +302,7 @@ Modern handicraft brand focused on quality, comfort and design.
 </ul>
 </div>
 
-<div class="footer-box">
+<div class="inner-boxes">
 <h3>Contact</h3>
 <p>Email: UniCraft@gmail.com</p>
 <p>Phone: +923040313435</p>

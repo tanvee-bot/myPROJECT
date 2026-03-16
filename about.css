@@ -151,13 +151,13 @@ margin-bottom:10px;
 }
 
 
-.footer{
+footer{
 background:#1f1f1f;
 color:white;
 padding:60px 80px 20px;
 }
 
-.footer-section{
+.main_box{
 display:flex;
 justify-content:space-between;
 gap:40px;
@@ -165,23 +165,23 @@ flex-wrap:wrap;
 margin-bottom:30px;
 }
 
-.footer-box{
+.inner_boxes{
 width:250px;
 }
 
-.footer-box h2{
-margin-bottom:15px;
+.inner_boxes h2{
+  margin-bottom:15px;
 }
-footer-box h3{
+
+.inner_boxes h3{
 margin-bottom:15px;
 }
 
-
-.footer-box ul{
+.inner_bixes ul{
 list-style:none;
 }
 
-.footer-box li{
+.inner_boxes li{
 margin:6px 0;
 }
 
