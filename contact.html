@@ -20,63 +20,79 @@
 
       
         .nav{
-  background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-     }
-nav ul{
-  list-style: none;
-  margin-left: 50px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:60px;
+position:relative;
 }
 
-.nav ul li{
-  display: inline;
-  color: gainsboro;
-  font-size:  15px;
-  font-family: 'poppins' , sans-serif;
-  text-transform: uppercase;
-  padding-left: 20px;
+.nav h2{
+font-size:24px;
+}
 
+.nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+align-items:center;
 }
 
 .nav a{
-  text-decoration: none;
-  color: #575555;;
-  gap: 25px;
-  transition: color 0.3s ease;
+text-decoration:none;
+color:#575555;
+padding-right: 26PX;
 }
-.nav ul li a:hover {
-  color: black;
-}
-.search{
-  display: flex; 
-  gap: 5px;
-}
-.search input{
-  border: 1px solid gray;
-  border-radius:6px;
-  padding: 8px 8px 8px 15px;
-  gap: 10px;
-  box-sizing: border-box;
-  width: 60%;
-}
-.search button{
-            padding: 10px 20px;
-            border: none;
-            background: #111;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
 
-        .search button:hover {
+/* SEARCH */
+
+.search{
+display:flex;
+gap:5px;
+}
+
+.search input{
+padding:8px;
+border:1px solid gray;
+border-radius:6px;
+}
+
+.search button{
+padding:8px 15px;
+border:none;
+background:#111;
+color:white;
+cursor:pointer;
+border-radius:4px;
+transition:0.3s;
+}
+
+.search button:hover {
             background: #ff6600;
         }
+
+        #menu-toggle{
+display:none;
+}
+
+.open-btn{
+font-size:28px;
+cursor:pointer;
+display:none;
+}
+
+.close-btn{
+display:none;
+position:absolute;
+top:15px;
+right:20px;
+font-size:26px;
+cursor:pointer;
+}
+
 
 .contact_us{
 background:#eee;
@@ -190,17 +206,31 @@ font-size:14px;
 
 <body>
 <nav class="nav">
-    <h2>UniCraft</h2>
-    <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="#">Gallery</a></li>
-    <li><a href="products.html">Our Products</a></li>
-   <li><a href="contact.html">Contact Us!</a></li>
-    <li>
-    </ul>
-    <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
-     </nav>
+
+<h2>UniCraft</h2>
+
+<input type="checkbox" id="menu-toggle">
+
+<label for="menu-toggle" class="open-btn">☰</label>
+
+<ul>
+
+<label for="menu-toggle" class="close-btn">✕</label>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Our Products</a></li>
+<li><a href="#">Contact Us</a></li>
+
+<div class="search">
+<input type="text" placeholder="Search">
+<button>Search</button>
+</div>
+
+</ul>
+
+</nav>
 <div class="contact_us">
 Contact Us
 </div>
