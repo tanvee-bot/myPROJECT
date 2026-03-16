@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
+<title>Furnish</title>
 
 <style>
 
@@ -78,70 +78,92 @@ nav ul{
             background: #ff6600;
         }
 
-.contact_us{
-background:#eee;
-padding:40px;
-text-align:center;
-font-size:30px;
-font-weight:bold;
-}
+/* HERO */
 
-
-.main_box{
-width:90%;
-max-width:1100px;
-margin:auto;
-padding:40px 0;
+.hero{
+height:90vh;
+background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover no-repeat;
 display:flex;
-gap:40px;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
 }
 
-.form{
-flex:1;
-background:white;
-padding:30px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.form h2{
+.hero h1{
+font-size:50px;
 margin-bottom:20px;
 }
 
-.form textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-}
-.form input{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
+.hero button{
+            padding: 10px 20px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #ff6600;
+        }
+
+
+/* PRODUCTS */
+
+.products{
+padding:80px 60px;
+text-align:center;
 }
 
-.form button{
-background:black;
-color:white;
-border:none;
-padding:12px 20px;
-cursor:pointer;
+.products h2{
+margin-bottom:40px;
+font-size:32px;
 }
 
-.contact-info{
-flex: 1px;
-background:white;
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+border:1px solid #eee;
+padding:20px;
+ transition: 0.3s;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+margin-top:10px;
+}
+.card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+/* SERVICES */
+
+.services{
+background:#f5f5f5;
+padding:60px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+text-align:center;
+}
+
+.service{
+background:#fff;
 padding:30px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.contact-info h2{
-margin-bottom:20px;
-}
-
-.contact-info p{
-margin-bottom:10px;
-}
+/* FOOTER */
 
 
 footer{
@@ -181,11 +203,11 @@ border-top:1px solid #444;
 padding-top:15px;
 font-size:14px;
 }
-
 </style>
 </head>
 
 <body>
+
 <nav class="nav">
     <h2>UniCraft</h2>
     <ul>
@@ -193,44 +215,71 @@ font-size:14px;
     <li><a href="about.html">About Us</a></li>
     <li><a href="#">Gallery</a></li>
     <li><a href="products.html">Our Products</a></li>
-   <li><a href="contact.html">Contact Us!</a></li>
+    <li><a href="contact.html">Contact Us!</a></li>
     <li>
     </ul>
     <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
-     </nav>
-<div class="contact_us">
-Contact Us
+</nav>
+
+<section class="hero">
+<div>
+<h1>Modern Furniture For Your Home</h1>
+<button>Shop Now</button>
+</div>
+</section>
+
+<section class="products">
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582582429416-8a3a9f3b3e16">
+<h3>Wood Chair</h3>
+<p>$120</p>
 </div>
 
-<div class="main_box">
-<div class="form">
-<h2>Send Message</h2>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<input type="text" placeholder="Subject">
-
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button>Send Message</button>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+<h3>Modern Sofa</h3>
+<p>$350</p>
 </div>
 
-<div class="contact-info">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503602642458-232111445657">
+<h3>Table Lamp</h3>
+<p>$90</p>
+</div>
 
-<h2>Contact Info</h2>
-
-<p><b>Address:</b> KARACHI SINDH PAKISTAN!</p>
-<p><b>Phone:</b> +923040313435</p>
-<p><b>Email:</b> UniCraft@gmail.com</p>
-
-<p>Modern handicraft brand focused on quality, comfort and design.</p>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9">
+<h3>Wood Table</h3>
+<p>$210</p>
 </div>
 
 </div>
+</section>
 
+<section class="services">
 
-    <footer class="footer">
+<div class="service">
+<h3>Free Delivery</h3>
+<p>Fast delivery for all orders.</p>
+</div>
+
+<div class="service">
+<h3>Support</h3>
+<p>24/7 customer support service.</p>
+</div>
+
+<div class="service">
+<h3>Secure Payment</h3>
+<p>Safe and secure payment system.</p>
+</div>
+
+</section>
+
+ <footer class="footer">
 
 <div class="footer-container">
 
@@ -263,8 +312,5 @@ Modern handicraft brand focused on quality, comfort and design.
 <div class="footer-bottom">
 © 2026 UniCraft. All Rights Reserved.
 </div>
-
-</footer>
-
 </body>
 </html>
