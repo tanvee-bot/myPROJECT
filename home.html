@@ -5,293 +5,325 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unicraft</title>
 
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
+/* ORIGINAL CUSTOM STYLES PRESERVED */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    }
+}
 
-        body {
-            background: #f5f5f5;
-        }
+body {
+    background: #f5f5f5;
+}
 
-      
-        .nav{
-  background-color: white;
+/* NAVBAR */
+.nav{
+    background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-     }
+    position: relative;
+}
+
+.nav h2{
+    font-size: 24px;
+    color: #111;
+}
+
+/* Existing nav links */
 nav ul{
-  list-style: none;
-  margin-left: 50px;
+    list-style: none;
+    margin-left: 50px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav ul li{
-  display: inline;
-  color: gainsboro;
-  font-size:  15px;
-  font-family: 'poppins' , sans-serif;
-  text-transform: uppercase;
-  padding-left: 20px;
-
+    display: inline;
+    color: gainsboro;
+    font-size:  15px;
+    font-family: 'poppins' , sans-serif;
+    text-transform: uppercase;
+    padding-left: 20px;
 }
 
 .nav a{
-  text-decoration: none;
-  color: #575555;;
-  gap: 25px;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #575555;
+    transition: color 0.3s ease;
 }
 .nav ul li a:hover {
-  color: black;
+    color: black;
 }
+
+/* SEARCH */
 .search{
-  display: flex; 
-  gap: 5px;
+    display: flex; 
+    gap: 5px;
 }
 .search input{
-  border: 1px solid gray;
-  border-radius:6px;
-  padding: 8px 8px 8px 15px;
-  gap: 10px;
-  box-sizing: border-box;
-  width: 60%;
+    border: 1px solid gray;
+    border-radius:6px;
+    padding: 8px 8px 8px 15px;
+    width: 60%;
 }
 .search button{
-            padding: 10px 20px;
-            border: none;
-            background: #111;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
+    padding: 10px 20px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.search button:hover {
+    background: #ff6600;
+}
 
-        .search button:hover {
-            background: #ff6600;
-        }
-
+/* MAIN PAGE */
 .main_page{
-height:90vh;
-background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
+    height:90vh;
+    background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
 }
-
 .main_page h1{
-font-size:50px;
-margin-bottom:20px;
+    font-size:50px;
+    margin-bottom:20px;
 }
-
 .main_page button{
-            padding: 10px 20px;
-            border: none;
-            background: #111;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-        .main_page button:hover {
-            background: #ff6600;
-        }
-
+    padding: 10px 20px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.main_page button:hover {
+    background: #ff6600;
+}
 
 /* PRODUCTS */
-
 .products{
-padding:80px 60px;
-text-align:center;
+    padding:80px 60px;
+    text-align:center;
 }
-
 .products h2{
-margin-bottom:40px;
-font-size:32px;
+    margin-bottom:40px;
+    font-size:32px;
 }
-
 .my_product{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-border-radius: 4px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    border-radius: 4px;
 }
-
 .picss{
-border:1px solid #eee;
-padding:20px;
-transition: 0.3s;
-
+    border:1px solid #eee;
+    padding:20px;
+    transition: 0.3s;
 }
-
 .picss img{
-width:100%;
-height:200px;
-object-fit:cover;
+    width:100%;
+    height:200px;
+    object-fit:cover;
 }
-
 .picss h3{
-margin-top:10px;
+    margin-top:10px;
 }
 .picss:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-/* SERVICES */
-
-.services{
-background:#f5f5f5;
-padding:60px;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-text-align:center;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* SERVICES */
+.services{
+    background:#f5f5f5;
+    padding:60px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    text-align:center;
+}
 .service{
-background:#fff;
-padding:30px;
+    background:#fff;
+    padding:30px;
 }
 
 /* FOOTER */
-
-
 footer{
-background:#1f1f1f;
-color:white;
-padding:60px 80px 20px;
+    background:#1f1f1f;
+    color:white;
+    padding:60px 80px 20px;
 }
-
 .main_box{
-display:flex;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-margin-bottom:30px;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
 }
-
-.inner_boxes{
-width:250px;
+.inner-boxes{
+    width:250px;
 }
-
-.inner_boxes h2{
-  margin-bottom:15px;
+.inner-boxes h2{
+    margin-bottom:15px;
 }
-
-.inner_boxes h3{
-margin-bottom:15px;
+.inner-boxes h3{
+    margin-bottom:15px;
 }
-
-.inner_bixes ul{
-list-style:none;
+.inner-boxes ul{
+    list-style:none;
 }
-
-.inner_boxes li{
-margin:6px 0;
+.inner-boxes li{
+    margin:6px 0;
 }
-
 .footer-bottom{
-text-align:center;
-border-top:1px solid #444;
-padding-top:15px;
-font-size:14px;
+    text-align:center;
+    border-top:1px solid #444;
+    padding-top:15px;
+    font-size:14px;
+}
+
+/* ====== RESPONSIVE FIXES ====== */
+@media (max-width: 992px){
+    .my_product{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 576px){
+    .my_product{
+        grid-template-columns: 1fr;
+    }
+    .services{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE NAV FIX */
+@media (max-width: 992px){
+    .nav .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav .navbar-nav {
+        width: 100%;
+    }
+    .nav .navbar-nav li {
+        width: 100%;
+        padding-left: 0;
+        border-bottom: 1px solid #eee;
+    }
+    .search {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px 0;
+    }
+    .search input {
+        width: 70%;
+    }
+    .search button {
+        margin-left: 5px;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<nav class="nav">
-    <h2>UniCraft</h2>
-    <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="#">Gallery</a></li>
-    <li><a href="products.html">Our Products</a></li>
-    <li><a href="contact.html">Contact Us!</a></li>
-    <li>
-    </ul>
-    <div class="search"><input type="text" placeholder="Search"><button>Search</button></div>
+<!-- NAVBAR -->
+<nav class="nav navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <h2>UniCraft</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Our Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us!</a></li>
+            </ul>
+            <div class="search ms-lg-3 mt-2 mt-lg-0">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
 </nav>
 
+<!-- MAIN SECTION -->
 <section class="main_page">
-<div>
-<h1>Modern Hnadicraft For Your Home</h1>
-<button>Shop Now</button>
-</div>
+    <div>
+        <h1>Modern Handicraft For Your Home</h1>
+        <button>Shop Now</button>
+    </div>
 </section>
 
+<!-- PRODUCTS -->
 <section class="products">
 <h2>Featured Products</h2>
-
 <div class="my_product">
-
 <div class="picss">
 <img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg">
 <h3>Wood Chair</h3>
 <p>$120</p>
 </div>
-
 <div class="picss">
 <img src="pics/pexels-puneet-singh-rawat-3530003-5874825.jpg">
 <h3>Modern Sofa</h3>
 <p>$350</p>
 </div>
-
 <div class="picss">
 <img src="pics/aluminium-handicrafts-2.jpg">
 <h3>Table Lamp</h3>
 <p>$90</p>
 </div>
-
 <div class="picss">
 <img src="pics/tuan-nguyen-_fxvuMucGDs-unsplash.jpg">
 <h3>Wood Table</h3>
 <p>$210</p>
 </div>
-
 </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
-
 <div class="service">
 <h3>Wood Handicraft</h3>
 <p>We deliver best wood handicraft Items.</p>
 </div>
-
 <div class="service">
 <h3>Home Decore items </h3>
 <p>Best home decore items for your home.</p>
 </div>
-
 <div class="service">
-<h3>Allumunium handicraft ittems</h3>
-<p>best hand made allumunium items .</p>
+<h3>Allumunium handicraft items</h3>
+<p>best hand made allumunium items.</p>
 </div>
-
 </section>
 
- <footer class="footer">
-
+<!-- FOOTER -->
+<footer class="footer">
 <div class="main_box">
-
 <div class="inner-boxes">
 <h2>UniCraft</h2>
-<p>
-Modern handicraft brand focused on quality,design.
-</p>
+<p>Modern handicraft brand focused on quality,design.</p>
 </div>
-
 <div class="inner-boxes">
 <h3>Quick Links</h3>
 <ul>
@@ -301,18 +333,20 @@ Modern handicraft brand focused on quality,design.
 <li>Contact</li>
 </ul>
 </div>
-
 <div class="inner-boxes">
 <h3>Contact</h3>
 <p>Email: UniCraft@gmail.com</p>
 <p>Phone: +923040313435</p>
 <p>Address: KARACHI SINDH PAKISTAN!</p>
 </div>
-
 </div>
-
 <div class="footer-bottom">
 © 2026 UniCraft. All Rights Reserved.
 </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (for collapse & hamburger) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
