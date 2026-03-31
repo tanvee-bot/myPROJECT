@@ -17,7 +17,7 @@
 
 body{
   overflow-x:hidden;
-  background:#f5f5f5;
+  background:#e6c7ad;
 }
 
 /* ================= NAVBAR ================= */
@@ -59,17 +59,20 @@ nav ul li a{
 }
 
 .search button{
-  padding:6px 12px;
+  padding:10px 22px;
   border:none;
-  background:#111;
-  color:#fff;
+  background:#f4a896;
+  border-radius:8px;
   cursor:pointer;
-  transition:0.3s;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 .search button:hover{
   background:#ff6600;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+   transform:translateY(-3px);
 }
+
 
 #menu-toggle{
   display:none;
@@ -107,7 +110,7 @@ nav ul li a{
 }
 
 .hero-text h1{
-  font-size:60px;
+  font-size:50px;
   color:#111;
 }
 
@@ -122,7 +125,15 @@ nav ul li a{
   background:#f4a896;
   border-radius:8px;
   cursor:pointer;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+.hero-text button:hover{
+  background:#ff6600;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+   transform:translateY(-5px);
+}
+
 
 /* ================= IMAGE ================= */
 
@@ -134,9 +145,9 @@ nav ul li a{
 /* ================= PRODUCTS ================= */
 
 .products{
-  padding:60px;
+  padding:50px;
   text-align:center;
-  background:#e2b6b6;
+  background:#eedada;
 }
 
 .products h1{
@@ -168,19 +179,22 @@ nav ul li a{
 
 .my_product p{
   color:#ff6600;
+  font-weight: bolder;
 }
 
 .my_product button{
-  margin-top:10px;
-  padding:8px 16px;
+  padding:9px 20px;
   border:none;
-  background:#111;
-  color:#fff;
+  background:#f4a896;
+  border-radius:8px;
   cursor:pointer;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 .my_product button:hover{
   background:#ff6600;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+   
 }
 
 /* ================= SERVICES ================= */
@@ -201,7 +215,7 @@ nav ul li a{
 }
 
 .service{
-  background:#e2b6b6;
+  background:#f0e5e5;
   padding:40px;
   transition:0.4s;
 }
@@ -309,6 +323,16 @@ footer{
     grid-template-columns:1fr;
   }
 }
+@media(max-width:768px){
+  .main_box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .main_box > div{
+    width:100%;
+  }
+}
 
 </style>
 </head>
@@ -327,7 +351,7 @@ footer{
   <ul>
     <li><a href="home.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
-    <li><a href="">Gallery</a></li>
+    <li><a href="gallary.html">Gallery</a></li>
     <li><a href="products.html">Our Products</a></li>
     <li><a href="contact.html">Contact Us</a></li>
   </ul>
@@ -342,7 +366,7 @@ footer{
 <section class="main_page">
 
   <div class="hero-text">
-    <h1>Best Home Decore Items<br> For Your Home</h1>
+    <h1>Best Handicraft items For<br>Your Home</h1>
     <p>Modern handicraft items for your beautiful home.</p>
     <button>Shop Now</button>
   </div>
@@ -359,22 +383,57 @@ footer{
   <div class="my_product">
 
     <div class="picss">
-      <img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg">
-      <h3>Wood Chair</h3>
+      <img src="home_page_images/hans-jugs-64975_1920.jpg">
+      <h3>Clay Lota</h3>
       <p>$120</p>
       <button>Add to Cart</button>
     </div>
 
     <div class="picss">
-      <img src="pics/pexels-puneet-singh-rawat-3530003-5874825.jpg">
-      <h3>Modern Sofa</h3>
+      <img src="home_page_images/gsg_03-lamp-6603047_1920.jpg">
+      <h3>Lamp</h3>
       <p>$350</p>
       <button>Add to Cart</button>
     </div>
 
     <div class="picss">
-      <img src="pics/aluminium-handicrafts-2.jpg">
-      <h3>Table Lamp</h3>
+      <img src="home_page_images/yogendras31-pottery-5245179_1920.jpg">
+      <h3>Mug</h3>
+      <p>$90</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="picss">
+      <img src="home_page_images/vilkasss-pottery-10128114_1920.jpg">
+      <h3>Wood Cup</h3>
+      <p>$210</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+<section class="products">
+  <h1>Other Products</h1>
+
+  <div class="my_product">
+
+    <div class="picss">
+      <img src="home_page_images/pexels-ancient-2179091_1920.jpg">
+      <h3>Clay Cup</h3>
+      <p>$120</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="picss">
+      <img src="home_page_images/riteshphotography-pottery-2784562_1920.jpg">
+      <h3>Clay Mug</h3>
+      <p>$350</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="picss">
+      <img src="home_page_images/aicanvas-ai-generated-8670677_1920.jpg">
+      <h3>Flower vase</h3>
       <p>$90</p>
       <button>Add to Cart</button>
     </div>
@@ -391,7 +450,7 @@ footer{
 
 <section class="services">
 
-  <h1>Services</h1>
+  <h1> Our Services</h1>
 
   <div class="service">
     <h3>Wood Handicraft</h3>

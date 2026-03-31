@@ -4,11 +4,234 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Handi CRAFT-About</title>
-<link rel="stylesheet" href="about.css">
 
+<style>
 
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  background:#e6c7ad;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  height:60px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* NAV LINKS */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#333;
+}
+
+/* SEARCH */
+.search{
+  display:flex;
+  gap:5px;
+}
+
+.search input{
+  padding:6px;
+}
+
+.search button{
+  padding:10px 22px;
+  border:none;
+  background:#f4a896;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.4s;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.search button:hover{
+  background:#ff6600;
+  transform:translateY(-3px);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  padding:40px 20px;
+  text-align:center;
+}
+
+/* ================= MISSION ================= */
+
+.mission{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:60px 10%;
+  flex-wrap:wrap;
+}
+
+.mission img{
+  width:45%;
+  border-radius:10px;
+}
+
+.our_mission{
+  width:45%;
+}
+
+/* ================= CORE / TEAM ================= */
+
+.section{
+  padding:40px 20px;
+}
+
+.team{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.team-section{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.team-section1{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  text-align:center;
+}
+
+.team-section1 img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#1f1f1f;
+  color:white;
+  padding:60px 40px 20px;
+}
+
+.main_box{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #444;
+  padding-top:15px;
+  font-size:14px;
+}
+
+/* ================= MOBILE MENU ================= */
+
+#menu-toggle{
+  display:none;
+}
+
+.hamburger{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+}
+
+.close-btn{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+  position:fixed;
+  top:15px;
+  right:20px;
+  z-index:2000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .search{
+    display:none;
+  }
+
+  nav ul{
+    position:fixed;
+    top:0;
+    right:-260px;
+    width:250px;
+    height:100vh;
+    background:#fff;
+    flex-direction:column;
+    padding-top:60px;
+    transition:0.3s;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.2);
+    z-index:1500;
+  }
+
+  nav ul li{
+    padding:15px 20px;
+    border-bottom:1px solid #eee;
+  }
+
+  #menu-toggle:checked ~ ul{
+    right:0;
+  }
+
+  #menu-toggle:checked ~ .close-btn{
+    display:block;
+  }
+
+  .mission{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+  }
+
+  .mission img,
+  .our_mission{
+    width:100%;
+  }
+}
+
+</style>
 </head>
-<body>
+
 <body>
 
 <nav>
@@ -22,8 +245,8 @@
 
   <ul>
     <li><a href="home.html">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="about.html">Gallery</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="gallary.html">Gallery</a></li>
     <li><a href="products.html">Our Products</a></li>
     <li><a href="contact.html">Contact Us</a></li>
   </ul>
@@ -34,113 +257,119 @@
   </div>
 
 </nav>
-<section class="about">
-<h1>About Our Store</h1>
-<p>
-Our mission is to deliver authentic, handcrafted products to every customer
-</p>
-</section>
 
 <section class="about">
-<div class="mission">
-<img src="pics/yasin-onus-nA-rlWLiv4w-unsplash.jpg" alt="">
-<div class="our_mission">
-<h1>Our Mission</h1>
-<p>
-Our mission is to deliver authentic, handcrafted products to every customer, crafted with creativity, quality, and traditional craftsmanship
-</p>
-</div>
-</div>
+  <h1>About Our Store</h1>
+  <p>Our mission is to deliver authentic, handcrafted products to every customer</p>
 </section>
 
-<section class="Values">
-<h1>Our Core Values</h1>
+<section class="mission">
+  <img src="pics/yasin-onus-nA-rlWLiv4w-unsplash.jpg">
 
-<div class="values_main_div">
-
-<div class="Inner_values">
-<h3>Design</h3>
-<p>Modern and clean Handicraft design.</p>
-</div>
-
-<div class="Inner_values">
-<h3>Quality</h3>
-<p>High quality materials and finish.</p>
-</div>
-
-<div class="Inner_values">
-<h3>Comfort</h3>
-<p>Built spacially for your home.</p>
-</div>
-
-</div>
+  <div class="our_mission">
+    <h1>Our Mission</h1>
+    <p>
+      Our mission is to deliver authentic, handcrafted products to every customer,
+      crafted with creativity, quality, and traditional craftsmanship.
+    </p>
+  </div>
 </section>
-
 
 <section class="section">
-<h1 class="team">Our Team</h1>
+  <h1 class="team">Our Core Values</h1>
 
-<div class="team-section">
+  <div class="team-section">
 
-<div class="team-section1">
-<img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg" alt="">
-<h3>John</h3>
-<p>CEO</p>
-</div>
+    <div class="team-section1">
+      <img src="pics/yasin-onus-MsKMSCxNWB0-unsplash.jpg">
+      <h3>Quality</h3>
+      <p>Maintaining the highest standards</p>
+    </div>
 
-<div class="team-section1">
-<img src="pics/vecteezy_handcrafted-wicker-baskets-and-containers-for-eco-friendly_72187857.jpg" alt="">
-<h3>Ali</h3>
-<p>Manager</p>
-</div>
+    <div class="team-section1">
+      <img src="pics/vecteezy_handcrafted-wicker-baskets-and-containers-for-eco-friendly_72187857.jpg">
+      <h3>Integrity</h3>
+      <p>Working honestly</p>
+    </div>
 
-<div class="team-section1">
-<img src="pics/pexels-puneet-singh-rawat-3530003-5874825.jpg" alt="">
-<h3>David</h3>
-<p>Designer</p>
-</div>
+    <div class="team-section1">
+      <img src="home_page_images/kimdaejeung-container-3248515_1920.jpg">
+      <h3>Innovation</h3>
+      <p>Better solutions</p>
+    </div>
 
-<div class="team-section1">
-<img src="pics/tuan-nguyen-_fxvuMucGDs-unsplash.jpg" alt="">
-<h3>Ahmed</h3>
-<p>Developer</p>
-</div>
+    <div class="team-section1">
+      <img src="pics/tuan-nguyen-_fxvuMucGDs-unsplash.jpg">
+      <h3>Customer Focus</h3>
+      <p>Customer satisfaction</p>
+    </div>
 
-</div>
+  </div>
 </section>
 
-<footer class="footer">
+<section class="section">
+  <h1 class="team">Our Team</h1>
 
-<div class="main_box">
+  <div class="team-section">
 
-<div class="inner-boxes">
-<h2>UniCraft</h2>
-<p>
-Modern handicraft brand focused on quality, comfort and design.
-</p>
-</div>
+    <div class="team-section1">
+      <img src="pics/20252177-man-6557757.jpg">
+      <h3>Tanveer Ali</h3>
+      <p>CEO</p>
+    </div>
 
-<div class="inner-boxes">
-<h3>Quick Links</h3>
-<ul>
-<li>Home</li>
-<li>About</li>
-<li>Products</li>
-<li>Contact</li>
-</ul>
-</div>
+    <div class="team-section1">
+      <img src="pics/20252177-man-6557757.jpg">
+      <h3>Shafique</h3>
+      <p>Manager</p>
+    </div>
 
-<div class="inner-boxes">
-<h3>Contact</h3>
-<p>Email: UniCraft@gmail.com</p>
-<p>Phone: +923040313435</p>
-<p>Address: KARACHI SINDH PAKISTAN!</p>
-</div>
+    <div class="team-section1">
+      <img src="pics/20252177-man-6557757.jpg">
+      <h3>Fazal-e-Rabi</h3>
+      <p>Designer</p>
+    </div>
 
-</div>
+    <div class="team-section1">
+      <img src="pics/20252177-man-6557757.jpg">
+      <h3>Waqar</h3>
+      <p>Developer</p>
+    </div>
 
-<div class="footer-bottom">
-© 2026 UniCraft. All Rights Reserved.
-</div>
+  </div>
+</section>
+
+<footer>
+
+  <div class="main_box">
+
+    <div>
+      <h2>UniCraft</h2>
+      <p>Modern handicraft brand</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <p>Home</p>
+      <p>About</p>
+      <p>Products</p>
+      <p>Contact</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>Email: UniCraft@gmail.com</p>
+      <p>Phone: +923040313435</p>
+      <p>Address: Karachi Pakistan</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 UniCraft. All Rights Reserved.
+  </div>
+
+</footer>
+
 </body>
 </html>

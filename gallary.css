@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  background:#e6c7ad;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  height:60px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  position:relative;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#333;
+}
+
+.search{
+  display:flex;
+  gap:5px;
+}
+
+.search input{
+  padding:6px;
+}
+
+.search button{
+  padding:10px 22px;
+  border:none;
+  background:#f4a896;
+  border-radius:8px;
+  cursor:pointer;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.search button:hover{
+  background:#ff6600;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+   transform:translateY(-3px);
+}
+
+
+#menu-toggle{
+  display:none;
+}
+
+.hamburger{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+}
+
+.close-btn{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+  position:fixed;
+  top:15px;
+  right:20px;
+  z-index:2000;
+}
+.gallery {
+  text-align: center;
+  padding: 40px;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+footer{
+  background:#1f1f1f;
+  color:white;
+  padding:60px 80px 20px;
+}
+
+.main_box{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:40px;
+  margin-bottom:30px;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #444;
+  padding-top:15px;
+  font-size:14px;
+}
+.products {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .price {
+            color: #ff6600;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .page-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        
+
+        
