@@ -1,62 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="gallary.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html, body{
+  overflow-x:hidden; /* LEFT-RIGHT SCROLL FIX */
+}
+
+body{
+  background:#e6c7ad;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  height:60px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  position:relative;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  width:100%;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* MENU */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#333;
+}
+
+/* SEARCH */
+.search{
+  display:flex;
+  gap:5px;
+}
+
+.search input{
+  padding:6px;
+}
+
+.search button{
+  padding:10px 22px;
+  border:none;
+  background:#f4a896;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HAMBURGER SYSTEM */
+#menu-toggle{
+  display:none;
+}
+
+.hamburger{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+}
+
+.close-btn{
+  font-size:26px;
+  cursor:pointer;
+  display:none;
+}
+
+/* ================= PAGE ================= */
+
+.page-title{
+  text-align:center;
+  padding:50px 20px;
+  background:#fff;
+}
+
+.products{
+  padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#1f1f1f;
+  color:white;
+  padding:60px 80px 20px;
+}
+
+.main_box{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #444;
+  padding-top:15px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  /* SHOW HAMBURGER */
+  .hamburger{
+    display:block;
+  }
+
+  /* MENU */
+  nav ul{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:250px;
+    height:100%;
+    background:#fff;
+    flex-direction:column;
+    padding:80px 20px;
+    transition:0.3s;
+    z-index:1000;
+  }
+
+  /* OPEN MENU */
+  #menu-toggle:checked ~ ul{
+    right:0;
+  }
+
+  /* CLOSE BUTTON */
+  nav ul .close-btn{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
+  }
+
+  /* SEARCH HIDE */
+  .search{
+    display:none;
+  }
+
+  /* FOOTER */
+  footer{
+    padding:40px 20px;
+  }
+
+  .main_box{
+    flex-direction:column;
+  }
+}
+</style>
 </head>
+
 <body>
-    <nav>
+
+<nav>
 
   <div class="logo">UniCraft</div>
 
   <input type="checkbox" id="menu-toggle">
 
   <label for="menu-toggle" class="hamburger">☰</label>
-  <label for="menu-toggle" class="close-btn">✕</label>
 
   <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
+    <label for="menu-toggle" class="close-btn">✕</label>
+
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
     <li><a href="#">Gallery</a></li>
-    <li><a href="products.html">Our Products</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="#">Our Products</a></li>
+    <li><a href="#">Contact Us</a></li>
   </ul>
 
   <div class="search">
     <input type="text" placeholder="Search">
     <button>Search</button>
   </div>
+
 </nav>
+
 <section class="page-title">
-        <h2>Our Gallery</h2>
-    </section>
-    <section class="products">
+  <h2>Our Gallery</h2>
+</section>
 
-        <div class="product-card">
-            <img src="pics/home decore.jpeg" alt="">
-        </div>
-        <div class="product-card">
-            <img src="pics/home decore 2.jpg" alt="">
-        </div>
-        <div class="product-card">
-            <img src="pics/home decore 3.jpeg" alt="">
-        </div>
-    </section>
-    <section class="products">
+<section class="products">
+  <div class="product-card">
+    <img src="pics/home decore.jpeg">
+  </div>
+  <div class="product-card">
+    <img src="pics/home decore 2.jpg">
+  </div>
+  <div class="product-card">
+    <img src="pics/home decore 3.jpeg">
+  </div>
+</section>
 
-        <div class="product-card">
-            <img src="pics/home decore.jpeg" alt="">
-        </div>
-        <div class="product-card">
-            <img src="pics/home decore 2.jpg" alt="">
-        </div>
-        <div class="product-card">
-            <img src="pics/home decore 3.jpeg" alt="">
-        </div>
+<section class="products">
+  <div class="product-card">
+    <img src="pics/home decore.jpeg">
+  </div>
+  <div class="product-card">
+    <img src="pics/home decore 2.jpg">
+  </div>
+  <div class="product-card">
+    <img src="pics/home decore 3.jpeg">
+  </div>
+</section>
 
-    </section>
 <footer>
 
   <div class="main_box">
